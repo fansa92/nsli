@@ -1,0 +1,16 @@
+# 构建产物
+/nsli
+/nsli.exe
+*.exe
+/dist/
+/stage/
+
+# 离线数据库
+*.dat
+*.7z
+
+# 编辑器与系统文件
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
