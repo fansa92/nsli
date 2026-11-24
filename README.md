@@ -13,9 +13,21 @@
 
 | 平台 | 架构 | 文件 |
 |---|---|---|
-| Windows | amd64 / arm64 | `nsli_windows_amd64.zip` / `nsli_windows_arm64.zip` |
-| Linux | amd64 / arm64 / 386 | `nsli_linux_amd64.tar.gz` 等 |
-| macOS | amd64 / arm64 | `nsli_darwin_amd64.tar.gz` / `nsli_darwin_arm64.tar.gz` |
+| Windows | amd64 / arm64 | `nsli_<版本>_windows_amd64.zip` 等 |
+| Linux | amd64 / arm64 / 386 / armv7 / mipsle / loong64 / riscv64 | `nsli_<版本>_linux_armv7.tar.gz` 等 |
+| macOS | amd64 / arm64 | `nsli_<版本>_darwin_arm64.tar.gz` 等 |
+| FreeBSD | amd64 | `nsli_<版本>_freebsd_amd64.tar.gz` |
+
+共 12 个目标，含路由器（MIPSLE）、ARM 开发板、国产龙芯、RISC-V 和 BSD。
+
+安装示例（Linux amd64）：
+
+```bash
+version=1.0.1
+curl -LO "https://github.com/fansa92/nsli/releases/download/v${version}/nsli_${version}_linux_amd64.tar.gz"
+tar -xzf "nsli_${version}_linux_amd64.tar.gz"
+sudo install -m 755 "nsli_${version}_linux_amd64/nsli" /usr/local/bin/nsli
+```
 
 每个 Release 附带 `checksums.txt`，可用于校验完整性。
 
